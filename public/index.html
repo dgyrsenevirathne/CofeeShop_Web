@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>Coffee Shop</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">Coffee Shop</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Brewed with Love</h1>
+            <p class="hero-subtitle">Your Neighborhood Coffee Escape</p>
+            <a href="menu.html" class="cta-button">View Our Menu</a>
+        </div>
+        <video autoplay muted loop id="hero-video">
+            <source src="videos/coffee-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Featured Specialties Section -->
+    <section class="featured-specialties">
+        <h2 class="section-title">Featured Specialties</h2>
+
+        <!-- Slider Container -->
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <img src="images/menu/cappuccino.jpg" alt="Cappuccino">
+                    <h3>Cappuccino</h3>
+                    <p>Rich espresso, steamed milk, and a decadent layer of foam.</p>
+                    <p class="price">$4.00</p>
+                </div>
+                <div class="slide">
+                    <img src="images/menu/iced-coffee.jpg" alt="Latte">
+                    <h3>Latte</h3>
+                    <p>Smooth espresso blended with velvety milk, topped with foam.</p>
+                    <p class="price">$4.50</p>
+                </div>
+                <div class="slide">
+                    <img src="images/menu/americano.jpg" alt="Cold Brew">
+                    <h3>Cold Brew</h3>
+                    <p>Slow-steeped cold brew with rich, smooth flavor.</p>
+                    <p class="price">$3.75</p>
+                </div>
+                <div class="slide">
+                    <img src="images/menu/espresso.jpg" alt="Special Blend">
+                    <h3>Special Blend</h3>
+                    <p>Our house blend with hints of caramel and chocolate.</p>
+                    <p class="price">$4.25</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="https://facebook.com/YourCoffeeShop" target="_blank"><img src="images/social/facebook-48.png"
+                        alt="Facebook"></a>
+                <a href="https://instagram.com/YourCoffeeShop" target="_blank"><img src="images/social/instagram-48.png"
+                        alt="Instagram"></a>
+                <a href="https://twitter.com/YourCoffeeShop" target="_blank"><img src="images/social/twitterx-48.png"
+                        alt="Twitter"></a>
+            </div>
+            <p>&copy; 2024 Coffee Shop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
