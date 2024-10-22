@@ -69,6 +69,39 @@ app.post('/submit_order', async (req, res) => {
     }
 });
 
+// Submit contact form route
+app.post('/submit_contact', async (req, res) => {
+    const { name, email, message } = req.body;
+
+    try {
+        // Connect to SQL Server
+        await sql.connect(sqlConfig);
+
+        // SQL query to insert the contact form data
+        const query = `
+            INSERT INTO contacts (name, email, message)
+            VALUES (@name, @email, @message)
+        `;
+
+        // Prepare and execute the query with parameters
+        const request = new sql.Request();
+        request.input('name', sql.VarChar, name);
+        request.input('email', sql.VarChar, email);
+        request.input('message', sql.VarChar, message);
+
+        const result = await request.query(query);
+
+        console.log('Contact form submitted successfully:', result);
+        res.send('Contact form submitted successfully');
+    } catch (error) {
+        console.error('Error submitting contact form:', error);
+        res.status(500).send('Error submitting contact form: ' + error.message);
+    } finally {
+        await sql.close();
+    }
+});
+
+
 // Start the server
 app.listen(3002, () => {
     console.log('Server is running on port 3002');
