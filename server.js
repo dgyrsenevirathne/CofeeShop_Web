@@ -11,13 +11,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // SQL Server connection configuration
 const sqlConfig = {
-    driver: 'msnodesqlv8',
-    server: 'MSI\\SQLEXPRESS',  // Use double backslashes for Windows paths
-    database: 'coffee_shop',    // Replace with your database name
-    options: {
-        trustedConnection: true  // Use Windows authentication
-    }
+    connectionString: 'Driver={ODBC Driver 17 for SQL Server};Server=MSI\\SQLEXPRESS;Database=coffee_shop;Trusted_Connection=yes;'
 };
+
 
 // Function to test the SQL Server connection
 async function testConnection() {
